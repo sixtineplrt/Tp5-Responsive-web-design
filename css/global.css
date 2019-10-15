@@ -5,6 +5,10 @@
     font-weight: bold;
 }
 
+#prout {
+    border: 2px solid black;
+}
+
 * { 
     font-family: 'My Lucida', Console;
 }
@@ -20,6 +24,8 @@ a {
 
 .wrapper {
     padding: 25px 0;
+    border-bottom: 3px solid #e1e6e9;
+    margin-bottom: 10px;
 }
 
 body > header {
@@ -37,7 +43,7 @@ header .user {
 }
 
 header .user a {
-    font-size: 13px;
+    font-size: 1em;
     color: #89949b;
     padding-top: 5px;
 }
@@ -54,13 +60,11 @@ main article {
 h3 {
     color: #b8c3c9;
     text-transform: uppercase;
-    font-size: 11px;
     font-weight: normal;
     margin-bottom: 10px;
 }
 
 nav ul li a { 
-    font-size: 14px;
     font-weight: normal;
     color: #828c92;
 }
@@ -85,14 +89,16 @@ nav ul li:last-child {
 
 h1 {
     color: #4b5c66;
-    font-size: 24px;
     font-weight: normal;
     margin: 0 0 8px 0;
 }
 
+.name {
+    margin-left: 12px;
+}
+
 .name p { 
     color: #a0aab1;
-    font-size: 12px;
 }
 
 .name p img { 
@@ -102,13 +108,12 @@ h1 {
 
 .stats-links {
     color: #4b5c66;
-    font-size: 12px;
     padding: 15px 0px 10px 0px;
     border-bottom: 1px solid #e1e6e9;
     margin-bottom: 20px;
 }
 
-.stats-links span, .stats-links a {
+.stats-links span {
     margin-right: 20px;
 }
 
@@ -117,13 +122,11 @@ h1 {
 }
 
 .stats-links a {
-    font-size: 12px;
     font-weight: normal;
     color: #4b5c66;
 }
 
 h2 {
-    font-size: 20px;
     font-weight: normal;
     color: #4b5c66;
 }
@@ -137,7 +140,7 @@ input.search {
     box-shadow: none;
     height: 28px;
     width: 100%;
-    font-size: 13px;
+    font-size: 1em;
     padding: 3px 6px 3px 25px;
     border: 1px solid #d0dde9;
     margin: 0;
@@ -151,7 +154,6 @@ input.submit {
 }
 
 .station {
-    font-size: 12px;
     color: #008fd5;
     border-radius: 5px;
     border: 1px solid #b8c3c9;
@@ -159,7 +161,12 @@ input.submit {
     padding: 7px 10px 7px 30px;
     box-shadow: 1px 1px #d5d5d5;
     background: url("../img/icon/station.png") no-repeat 8px;
-    transition: all 0.4s;
+    transition: all 0.4s; 
+}
+
+#station {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .station:hover {
@@ -170,7 +177,6 @@ input.submit {
 
 
 #albums article {
-    font-size: 13px;
     color: #89949b;
     margin: 10px 0;
 }
@@ -195,8 +201,8 @@ input.submit {
 
 #albums article .artist, #albums article .count {
     margin-top: 4px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    /*white-space: nowrap;
+    text-overflow: ellipsis;*/
 }
 
 #albums .explicit {
@@ -217,5 +223,98 @@ nav a.collection { background: url("../img/icon/collection.png") no-repeat 0px; 
 nav a.history { background: url("../img/icon/history.png") no-repeat 0px; }
 
 
+@media (max-width: 576px) {
+    .name a {
+        display: none;
+    }
+}
 
+@media (max-width: 768px) {
+    header form {
+        display: none;
+    }
+}
 
+@media (max-width: 600px) {
+    .name h1 {
+        font-size: 1.5em;;
+    }
+
+    .name p {
+        font-size: 0.8em;
+    }
+
+    .stats-links { 
+        font-size: 0.8em;
+    }
+
+    #album article {
+        font-size: 0.9em;
+    }
+
+    h3 {
+        font-size: 0.7em;
+    }
+
+    .station {
+        font-size: 0.8em;
+    }
+
+    nav ul li a { 
+        font-size: 1em;
+    }
+
+    .stats-links a {
+        font-size: 0.8em;
+    }
+
+    main h2 {
+        font-size: 1.3em;
+    }
+
+    header aside img {
+        width: 50px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .name h1 {
+        font-size: 2em;;
+    }
+
+    .name p {
+        font-size: 1em;
+    }
+
+    .stats-links { 
+        font-size: 1em;
+    }
+
+    #album article {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 0.9em;
+    }
+
+    .station {
+        font-size: 1em;
+    }
+
+    nav ul li a { 
+        font-size: 1.2em;
+    }
+
+    .stats-links a {
+        font-size: 1em;
+    }
+
+    main h2 {
+        font-size: 1.7em;
+    }
+
+    header aside img {
+        width: 80px;
+    }
+}
